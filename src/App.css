@@ -1,0 +1,23 @@
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
+.custom-box {
+    padding: 1rem;
+    /* border: 2px; */
+    /* border-width: 1px; */
+    /* border-style: solid; */
+    /* border-color: rgb(212 212 216 / var(--tw-border-opacity)); */
+    background-color: rgb(82 82 92 / var(--tw-bg-opacity));
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-shadow-color: #000;
+    --tw-shadow: var(--tw-shadow-colored);
+    --tw-border-opacity: 1;
+    --tw-bg-opacity: 1;
+}
