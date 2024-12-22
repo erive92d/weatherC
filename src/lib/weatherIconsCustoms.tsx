@@ -17,7 +17,7 @@ export const weatherIcons = (condition: string) => {
         case "Clouds":
             conditionIcon = fewCloudsConditionIcon;
             break;
-        case "Rain" || "Drizzle":
+        case "Rain":
             conditionIcon = rainConditionIcon;
             break;
         case "Snow":

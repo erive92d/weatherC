@@ -45,7 +45,7 @@ export default function Header() {
         setCityName(e.target.value);
     };
 
-    // console.log(cityHistory)
+    console.log(cityHistory, "History")
 
     const handleCitySelect = (city: CityDetailsState) => {
         setSelectedCity(city)
