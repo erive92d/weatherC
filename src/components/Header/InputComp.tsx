@@ -1,4 +1,4 @@
-import { CityDetailsState, CityProps } from "../../props"
+import { CityDetailsState } from "../../props"
 
 type NavProps = {
     onChangeCity: React.ReactEventHandler

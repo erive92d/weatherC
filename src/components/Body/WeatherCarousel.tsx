@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 export default function WeatherCarousel({ followingWeathers, isToday, getDayName, getHour, weatherIcons }: any) {
     const carouselRef = useRef<HTMLDivElement>(null);

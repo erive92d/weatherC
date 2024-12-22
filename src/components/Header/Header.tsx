@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDebounce } from 'use-debounce';
 import getCityGeo from '../../api/getCityGeo';
-import Loading from '../../lib/helper/Loading';
 import { CityDetailsState } from '../../props';
 import useCityStore from '../../lib/stores/cityStore';
 import InputComp from './InputComp';
@@ -45,6 +44,8 @@ export default function Header() {
         }
         setCityName(e.target.value);
     };
+
+    // console.log(cityHistory)
 
     const handleCitySelect = (city: CityDetailsState) => {
         setSelectedCity(city)

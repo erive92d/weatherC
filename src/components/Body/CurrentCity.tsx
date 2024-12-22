@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useLocation, Navigate } from "react-router-dom";
 import { CityDetailsState, CityProps } from "../../props";
 import getCityNow from "../../api/getCityNow";
 import FollowingWeathers from "./FollowingWeathers";
@@ -23,7 +22,7 @@ const convertTime = (time: number) => {
 
 
 const WeatherCard = ({ weatherNow }: { weatherNow: CityProps }) => {
-    const [isClick, setIsClick] = useState<boolean>(false);
+    // const [isClick, setIsClick] = useState<boolean>(false);
 
     return (
         <div className="flex flex-col md:flex-row lg:flex-row gap-8 mb-4">

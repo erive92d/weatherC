@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import getCurrentCity from "../../api/getCurrentCity";
 import isToday from "../../lib/isTodayMatch";
-import { CityProps, ResultsProps } from "../../props";
+import { ResultsProps } from "../../props";
 import { weatherIcons } from "../../lib/weatherIconsCustoms";
 import WeatherCarousel from "./WeatherCarousel";
+import Loading from "../../lib/helper/Loading";
 
 interface CityDetailsState {
     name: string;
@@ -54,13 +55,18 @@ export default function FollowingWeathers({ city }: { city: CityDetailsState }) 
     }, [city])
     return (
         <div>
-            <WeatherCarousel
-                followingWeathers={followingWeathers}
-                isToday={isToday}
-                getDayName={getDayName}
-                getHour={getHour}
-                weatherIcons={weatherIcons}
-            />
+            {loading && <Loading />}
+            {error && <h1>Error</h1>}
+            {!loading && !error &&
+                <WeatherCarousel
+                    followingWeathers={followingWeathers}
+                    isToday={isToday}
+                    getDayName={getDayName}
+                    getHour={getHour}
+                    weatherIcons={weatherIcons}
+                />
+            }
+
         </div>
 
     )
