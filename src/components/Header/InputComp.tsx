@@ -30,7 +30,7 @@ export default function InputComp({ loading, onChangeCity, cityName, results, ha
             </div>
             {!loading &&
                 <ul className="absolute rounded-lg top-10 w-full bg-white text-black text-center divide-y-2 shadow-lg shadow-black">
-                    {results.map((result, idx) => (
+                    {results?.map((result, idx) => (
                         <li
                             key={`${result.lat}-${result.lon}-${idx}`}
                             onClick={() => handleCitySelect(result)}
